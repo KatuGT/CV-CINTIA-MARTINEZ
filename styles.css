@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Mandali&family=Pacifico&family=Righteous&display=swap');*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: ;
+}
+
+.banner{
+    height: 100vh;
+    width: 100vw;
+    /* background: radial-gradient(circle, rgba(40,0,75,1) 37%, rgba(1,3,3,1) 100%); */
+    background-color:#171f1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.saludo{    
+    font-family:'Pacifico';
+    font-size: 10em;
+    color:white;
+    text-shadow: 0 0 0.5em #00f0ff,                
+                0 0 0.1em #00f0ff;
+    position: relative;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all ease 2s;
+}
+
+.saludo::before{
+    content: '';
+    position: absolute;
+    background-color: #00f0ff;
+    top: 70%;
+    width: 100%;
+    height: 100%;
+    transform: perspective(.6em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1em);
+    opacity: .5;
+    z-index: 0;
+    transition: all ease 2s;
+}
+
+
+.saludo:hover{  
+    text-shadow:0 0 0.5em #00f0ff,
+                0 0 0.5em #00f0ff,                 
+                0 0 0.1em #00f0ff;              
+}
+.saludo:hover:before{
+    opacity: 1;
+}
