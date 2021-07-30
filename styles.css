@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Roboto;
 }
 
 :root{
@@ -21,7 +22,7 @@ nav .navbar-brand{
     font-size: 1.5em;
 }
 nav .nav-link{
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 /*-----------  TERMINA NAVBAR ---------*/
@@ -43,13 +44,15 @@ nav .nav-link{
     width: 100%;
     object-fit: cover;
     clip-path: url(#wave);
+    clip-path: margin-box;
 }
 
 
-#wave{
+/* #wave{
     overflow: hidden;
     animation: trasladar 20s linear infinite;
     animation-fill-mode: backwards;
+    border: 1em solid red;
 }
 
 @keyframes trasladar {
@@ -65,12 +68,12 @@ nav .nav-link{
         transform: translateX(0);
     }
     
-}
+} */
 
 .banner .saludo{    
  font-family: Roboto;
  font-weight: 900;
- font-size: 10em;
+ font-size: 5em;
  color: white;
  padding: 0 2rem;
  position: absolute;
@@ -82,62 +85,268 @@ nav .nav-link{
 /*-----------  TERMINA BANNER BIENVENIDA ---------*/
 
 /*-----------  EMPIEZA ABOUT ---------*/
+.about{
+    margin-top: 3em;
+}
 
+.sobreMi{
+    margin-top: 2em;
+}
 .rombo{
-    height: 60%;
     position: relative;
+}
+
+.foto{
+    z-index: 50;
+    height: 28em;
+    max-height: 28em;
 }
 
 .form{
     position: absolute;
-
 }
 
 .bg-1{
-    height: 100%;
-    top: -4em;
+    height: 90%;
+    top: -2em;
     right: 6em;
     z-index: 10;
+    animation:desplazamientoA 9s linear infinite forwards;
 }
 
 .bg-2{
-    height: 100%;
+    height: 90%;
     top: 2em;
-    right: 0em;
-    z-index: 10;
-    animation:desplazamientoB 5s linear infinite both; 
+    right: 4emem;
+    animation:desplazamientoB 8s linear infinite forwards; 
 }
 
 .bg-3{
-    height: 100%;
+    height: 90%;
     top: 2em;
     right: 15em;
     z-index: 10;
     transform: rotate(15deg);
+    animation:desplazamientoC 9s linear infinite forwards;
 }
 
 .bg-4{
     height: 100%;
     top: -2em;
-    right: 18em;
+    right: 2em;
     z-index: 10;
+    animation:desplazamientoD 9s linear infinite forwards;
 }
 
-.foto{
-    z-index: 50;
+
+@keyframes desplazamientoA {
+    0%{
+        transform: translateX(-3em);
+    }
+
+    30%{
+        transform: translateY(-1em);
+    }
+
+    50%{
+        transform: translateX(3em);
+    }
+
+    70%{
+        transform: translateY(3em);
+    }
+
+    100%{
+        transform: translateX(-3em);
+        
+    }
+    
+    
 }
 
 @keyframes desplazamientoB {
     0%{
-        transform: translateX(0);
+        transform: translateX(3em);
     }
 
-    26%{
-        transform: translateX(5em);
+    30%{
+        transform: translateY(3em);
+    }
+
+    50%{
+        transform: translateX(-3em);
+    }
+
+    70%{
+        transform: translateY(-3em);
     }
 
     100%{
-        transform: translateY(5em) translateX(-5em);
+        transform: translateX(3em);
+        
     }
     
+    
+}
+
+@keyframes desplazamientoC {
+    0%{
+        transform: translateX(3em);
+    }
+
+    30%{
+        transform: translateY(2em);
+    }
+
+    50%{
+        transform: translateX(-1em);
+    }
+
+    70%{
+        transform: translateY(-3em);
+    }
+
+    100%{
+        transform: translateX(3em);
+        
+    }
+    
+    
+}
+
+@keyframes desplazamientoD {
+    0%{
+        transform: translateX(3em);
+    }
+
+    30%{
+        transform: translateY(3em);
+    }
+
+    50%{
+        transform: translateX(-1em);
+    }
+
+    70%{
+        transform: translateY(0em);
+    }
+
+    100%{
+        transform: translateX(3em);
+        
+    }
+    
+    
+}
+
+.datos{
+    color: aliceblue;
+    position: relative;
+}
+
+.datos .nombre:before{
+    content: 'Cintia Jimena Martinez';
+    position: absolute;
+    color: #303030;
+    text-shadow: 0px 0px 0px rgb(0, 195, 255);
+    font-size: 1.125em;
+    font-family: 'Roboto'; 
+    font-weight: 900;   
+    z-index: -10;
+    transform: translateX(-0.65em);
+    transition: all 1s ease;
+}
+
+.datos .nombre:hover:before{
+    transform: scale(1.2) translateX(-0.65em);
+    text-shadow: 0px 0px 0px rgb(255, 0, 191);
+}
+
+
+
+
+.skills-wrap{
+    margin-bottom: 0.5em;
+    color: whitesmoke;
+    font-size: 1.5em
+}
+
+.skills-wrap:first-child{
+    margin-top: 0px;
+}
+
+.skills-wrap .lenguaje h3{
+    font-size: 1em;
+}
+
+.skills-wrap .progress-bar{
+    height: 1.3em;
+    width: 90%;
+    background-color: grey;
+    box-shadow: inset 0 1 1 rgb,(255, 0, 191, 0.5);
+    position: relative;
+    margin-bottom: 1em; 
+    border-radius: 1em;
+}
+
+.skills-wrap .progress-bar span{
+    height: 80%;
+    background-color: paleturquoise;
+    position: absolute;
+    border-radius: 1em;
+    margin-left: 0.2em;
+
+    background: linear-gradient(-90deg, #f9cfe7, #e73c7e, #0082c4, #70d3df);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+
+
+.skills-wrap .html{
+    width: 90%;
+}
+
+.skills-wrap .css{
+    width: 85%;
+}
+
+.skills-wrap .flex{
+    width: 80%;
+}
+
+.skills-wrap .bootstrap{
+    width: 70%;
+}
+
+.skills-wrap .js{
+    width: 50%;
+}
+
+.skills-wrap .react{
+    width: 50%;
+}
+
+.skills-wrap .node{
+    width: 70%;
+}
+
+.skills-wrap .mongo{
+    width: 75%;
 }
