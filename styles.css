@@ -98,8 +98,11 @@ nav .nav-link{
 
 .foto{
     z-index: 50;
-    height: 28em;
-    max-height: 28em;
+    width: 80%;
+}
+
+.nombre{
+    font-size: 2em;
 }
 
 .form{
@@ -109,7 +112,6 @@ nav .nav-link{
 .bg-1{
     height: 90%;
     top: -2em;
-    right: 6em;
     z-index: 10;
     animation:desplazamientoA 9s linear infinite forwards;
 }
@@ -117,14 +119,12 @@ nav .nav-link{
 .bg-2{
     height: 90%;
     top: 2em;
-    right: 4emem;
     animation:desplazamientoB 8s linear infinite forwards; 
 }
 
 .bg-3{
     height: 90%;
     top: 2em;
-    right: 15em;
     z-index: 10;
     transform: rotate(15deg);
     animation:desplazamientoC 9s linear infinite forwards;
@@ -133,7 +133,6 @@ nav .nav-link{
 .bg-4{
     height: 100%;
     top: -2em;
-    right: 2em;
     z-index: 10;
     animation:desplazamientoD 9s linear infinite forwards;
 }
@@ -261,92 +260,189 @@ nav .nav-link{
     transform: scale(1.2) translateX(-0.65em);
     text-shadow: 0px 0px 0px rgb(255, 0, 191);
 }
-
-
-
-
-.skills-wrap{
-    margin-bottom: 0.5em;
-    color: whitesmoke;
-    font-size: 1.5em
+.skills-bar{
+    padding: 0 4em;
 }
 
-.skills-wrap:first-child{
-    margin-top: 0px;
+.skills-bar .bar{
+    margin: 20px 0;
 }
 
-.skills-wrap .lenguaje h3{
+.skills-bar .bar:first-child{
+    margin-top: 0;
+}
+
+.skills-bar .bar .info {
+    font-size: 1.5rem;
+}
+
+.skills-bar .bar .info span{
     font-size: 1em;
+    font-weight: bold;
+    color: white;
 }
 
-.skills-wrap .progress-bar{
-    height: 1.3em;
-    width: 90%;
+.skills-bar .bar .line{
+    height: 3em;
+    width: 100%;
     background-color: grey;
-    box-shadow: inset 0 1 1 rgb,(255, 0, 191, 0.5);
+    border-radius: 25em;
+    box-shadow: inset 0 1px 1px rgba(0, 0n, 0, .5);
     position: relative;
-    margin-bottom: 1em; 
-    border-radius: 1em;
+    padding: .3em;
 }
 
-.skills-wrap .progress-bar span{
+.skills-bar .bar .line span{    
+    border-radius: 25em;
     height: 80%;
-    background-color: paleturquoise;
+    background-color: rosybrown;
     position: absolute;
-    border-radius: 1em;
-    margin-left: 0.2em;
 
-    background: linear-gradient(-90deg, #f9cfe7, #e73c7e, #0082c4, #70d3df);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+    background: linear-gradient(270deg, #e1c1ff, #56b7ee, #7072e3);
+    background-size: 600% 600%;
 
+    -webkit-animation: gradiente 11s ease infinite;
+    -moz-animation: gradiente 11s ease infinite;
+    animation: gradiente 11s ease infinite;
 }
 
 
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+@keyframes gradiente {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 
-
-
-
-.skills-wrap .html{
+.skills-bar .bar .line .html{
     width: 90%;
 }
 
-.skills-wrap .css{
-    width: 85%;
-}
-
-.skills-wrap .flex{
+.skills-bar .bar .line .css{
     width: 80%;
 }
 
-.skills-wrap .bootstrap{
-    width: 70%;
+.skills-bar .bar .line .flex{
+    width: 90%;
 }
 
-.skills-wrap .js{
-    width: 50%;
+.skills-bar .bar .line .bootstrap{
+    width: 60%;
 }
 
-.skills-wrap .react{
-    width: 50%;
-}
-
-.skills-wrap .node{
-    width: 70%;
-}
-
-.skills-wrap .mongo{
+.skills-bar .bar .line .js{
     width: 75%;
 }
+
+.skills-bar .bar .line .react{
+    width: 60%;
+}
+
+.skills-bar .bar .line .node{
+    width: 60%;
+}
+
+
+/* ---------------EDUCACION Y EXPERINCIA------------- */
+.edu-y-exp{
+    padding-top: 3em;
+    margin-top: 3em;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+.sombra::before{
+    content: '';
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    height: 100%;
+    width: 200%;
+    border-radius: 100%;
+    top: -90%;
+    filter: blur(2.5em);
+}
+
+.instituto,
+.empresa{
+    margin-top: 1em;
+}
+
+.edu-y-exp .titulo{
+    font-size: 3.5rem;
+}
+
+.edu-y-exp h3{
+    font-size: 2em;
+}
+
+.edu-y-exp p{
+    margin-bottom: 0;
+}
+
+/* ---------------PORTFOLIO------------- */
+
+.portfolio{
+    margin-top: 3em;
+    position: relative;
+}
+
+.portfolio .proyecto{
+    height: 100vh;
+    width: 100vw;    
+}
+
+.portfolio .proyecto img{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    object-position: top;
+    position: absolute;
+    z-index: -100;
+    transition: filter 1s ease;
+    filter: saturate(1);
+}
+
+.portfolio .proyecto:hover img{
+    filter: saturate(0);
+}
+
+.portfolio .proyecto .numero p{
+    background-color: hsla(225, 73%, 57%, 0.3);
+    display: inline-block;
+}
+
+.portfolio .descripcion{
+    position: relative;
+    background-color: hsla(225, 73%, 57%, 0.3);
+    bottom: -65%;
+    display: inline-block;
+    padding: 3em 5em 3em 8em;
+    backdrop-filter: blur(0.7em);
+    transition: transform ease 1s;
+}
+
+
+
+.portfolio .descripcion:hover{
+    transform: scale(1.1);
+}
+
+.portfolio .descripcion h3{
+    font-size: 3em;
+    font-weight: 900;
+}
+
+.portfolio .descripcion a{
+    color: white;
+    text-decoration: none;
+}
+ @media (min-width: 760px) {
+    .portfolio .descripcion{
+        transform: translateX(-100%);
+    }
+
+    .portfolio .proyecto:hover .descripcion{
+        transform: translateX(0);
+    }
+ }
