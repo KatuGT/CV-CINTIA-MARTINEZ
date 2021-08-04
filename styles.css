@@ -21,12 +21,6 @@ body{
 
 /*-----------  INICIA NAVBAR ---------*/
 
-nav .navbar-brand{
-    font-size: 1.5em;
-}
-nav .nav-link{
-    font-size: 1em;
-}
 
 /*-----------  TERMINA NAVBAR ---------*/
 
@@ -34,12 +28,7 @@ nav .nav-link{
 /*-----------  INICIA BANNER BIENVENIDA ---------*/
 
 .banner{
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    position: relative;
+    position: relative;    
 }
 
 .banner img{
@@ -76,7 +65,7 @@ nav .nav-link{
 .banner .saludo{    
  font-family: Roboto;
  font-weight: 900;
- font-size: 5em;
+ font-size: clamp(2em, 6vw, 8em);
  color: white;
  padding: 0 2rem;
  position: absolute;
@@ -356,11 +345,11 @@ nav .nav-link{
 }
 
 .edu-y-exp .titulo{
-    font-size: 3.5rem;
+    font-size: 2.5rem;
 }
 
 .edu-y-exp h3{
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .edu-y-exp p{
@@ -371,16 +360,24 @@ nav .nav-link{
 
 .portfolio{
     margin-top: 3em;
+    overflow-x: hidden;
 }
 
 .portfolio .proyecto{
-    height: 90vh;
-    width: 100vw;
+    overflow-x: hidden;
     margin-bottom: 10em;  
     position: relative;  
 }
 
+.portfolio .proyecto img{
+    object-fit: cover;
+    object-position: top left;
+    height: 500px;
+    width: 100%;
+}
+
 .portfolio .proyecto.derecha .numero p{
+    overflow-x: hidden;
     font-size: 2em;
     background-color: hsla(225, 73%, 57%);
     display: flex;
@@ -389,7 +386,7 @@ nav .nav-link{
     height: 4em;
     width: 5em;
     position: absolute;
-    margin-top: 2em;
+    margin-top: 1.5em;
     top: 0;
     right: 0;
     transition: all ease-in-out 2s;
@@ -406,7 +403,7 @@ nav .nav-link{
     width: 5em;
     float: left;
     position: absolute;
-    margin-top: 2em;
+    margin-top: 1.5em;
     top: 0;
     transition: all ease-in-out 2s;
     position: absolute;
@@ -414,27 +411,14 @@ nav .nav-link{
 
 
 
-.portfolio .proyecto img{
-    width: 100vw;
-    height: 95vh;
-    object-fit: cover;
-    object-position: top;
-    z-index: -100;
-    transition: filter 1s ease;
-    filter: saturate(1);
-}
-
-.portfolio .proyecto:hover img{
-    filter: saturate(0);
-}
-
-
 .portfolio .proyecto.derecha .descripcion{
     position: absolute;
     background-color: hsla(225, 73%, 57%);
     bottom: 5%;
-    display: inline-block;
-    padding: 3em 5em 3em 8em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3em 5em 3em 7em;
     transition: transform ease 1s;
     position: absolute;
     max-width: 70%;
@@ -444,10 +428,13 @@ nav .nav-link{
     position: absolute;
     background-color: hsla(225, 73%, 57%);
     bottom: 5%;
-    display: inline-block;
-    padding: 3em 5em 3em 8em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3em 8em 3em 3em;
     transition: transform ease 1s;
     position: absolute;
+    text-align: left;
     right: 0;
     max-width: 70%;
 }
@@ -455,7 +442,7 @@ nav .nav-link{
 
 
 .portfolio .descripcion h3{
-    font-size: 3em;
+    font-size: clamp(2em, 3vw, 3em);
     font-weight: 900;
 }
 
@@ -466,19 +453,23 @@ nav .nav-link{
 
  @media (min-width: 760px) {
     .portfolio .proyecto.derecha .descripcion{
-        transform: translateX(-100%);
+        transform: scale(0);
+        transform-origin: left;
     }
 
     .portfolio .proyecto.derecha:hover .descripcion{
-        transform: translateX(0);
+        transform-origin: left;
+        transform: scale(100%);
     }
 
     .portfolio .proyecto.izquierda .descripcion{
-        transform: translateX(100%);
+        transform: scale(0);
+        transform-origin: right;
     }
 
     .portfolio .proyecto.izquierda:hover .descripcion{
-        transform: translateX(0);
+        transform: scale(100%);
+        transform-origin: right;
     }
 
     .portfolio .proyecto .numero p{       
@@ -491,3 +482,10 @@ nav .nav-link{
     }
 
  }
+
+ /*----------- FOOOTER --------------*/
+footer{
+    height: 200px;
+    background: rgb(225,193,255);
+    background: linear-gradient(173deg, rgba(225,193,255,1) 0%, rgba(225,193,255,1) 54%, rgba(112,114,227,1) 54%, rgba(86,183,238,1) 100%);
+}
