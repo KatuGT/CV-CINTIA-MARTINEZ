@@ -371,39 +371,54 @@ nav .nav-link{
 
 .portfolio{
     margin-top: 3em;
-    position: relative;
 }
 
 .portfolio .proyecto{
-    height: 100vh;
-    width: 100vw;    
+    height: 90vh;
+    width: 100vw;
+    margin-bottom: 10em;  
+    position: relative;  
 }
 
-.portfolio .proyecto .numero p{
+.portfolio .proyecto.derecha .numero p{
     font-size: 2em;
-    background-color: hsla(225, 73%, 57%, 0.3);
+    background-color: hsla(225, 73%, 57%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 4em;
     width: 5em;
-    position: relative;
-    margin-top: 1.3em;
-    right: -90%;
-    clip-path: circle(0% at 50% 50%);    
+    position: absolute;
+    margin-top: 2em;
+    top: 0;
+    right: 0;
     transition: all ease-in-out 2s;
+    position: absolute;
 }
 
-.portfolio .proyecto:hover p{
-    clip-path: circle(1000% at 50% 50%);
+.portfolio .proyecto.izquierda .numero p{
+    font-size: 2em;
+    background-color: hsla(225, 73%, 57%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4em;
+    width: 5em;
+    float: left;
+    position: absolute;
+    margin-top: 2em;
+    top: 0;
+    transition: all ease-in-out 2s;
+    position: absolute;
 }
+
+
 
 .portfolio .proyecto img{
-    height: 100%;
-    width: 100%;
+    width: 100vw;
+    height: 95vh;
     object-fit: cover;
     object-position: top;
-    position: absolute;
     z-index: -100;
     transition: filter 1s ease;
     filter: saturate(1);
@@ -414,14 +429,27 @@ nav .nav-link{
 }
 
 
-
-.portfolio .descripcion{
-    position: relative;
-    background-color: hsla(225, 73%, 57%, 0.3);
-    bottom: -45%;
+.portfolio .proyecto.derecha .descripcion{
+    position: absolute;
+    background-color: hsla(225, 73%, 57%);
+    bottom: 5%;
     display: inline-block;
     padding: 3em 5em 3em 8em;
     transition: transform ease 1s;
+    position: absolute;
+    max-width: 70%;
+}
+
+.portfolio .proyecto.izquierda .descripcion{
+    position: absolute;
+    background-color: hsla(225, 73%, 57%);
+    bottom: 5%;
+    display: inline-block;
+    padding: 3em 5em 3em 8em;
+    transition: transform ease 1s;
+    position: absolute;
+    right: 0;
+    max-width: 70%;
 }
 
 
@@ -437,11 +465,29 @@ nav .nav-link{
 }
 
  @media (min-width: 760px) {
-    .portfolio .descripcion{
+    .portfolio .proyecto.derecha .descripcion{
         transform: translateX(-100%);
     }
 
-    .portfolio .proyecto:hover .descripcion{
+    .portfolio .proyecto.derecha:hover .descripcion{
         transform: translateX(0);
     }
+
+    .portfolio .proyecto.izquierda .descripcion{
+        transform: translateX(100%);
+    }
+
+    .portfolio .proyecto.izquierda:hover .descripcion{
+        transform: translateX(0);
+    }
+
+    .portfolio .proyecto .numero p{       
+        clip-path: circle(0% at 50% 50%);   
+    }
+
+
+    .portfolio .proyecto:hover p{
+        clip-path: circle(100% at 50% 50%);
+    }
+
  }
