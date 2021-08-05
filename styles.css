@@ -9,11 +9,6 @@
 }
 
 
-
-:root{
-    --main-color: ;
-}
-
 body{
     background-color: #303030;
     overflow-x: hidden;
@@ -35,8 +30,6 @@ body{
     height: 100vh;
     width: 100%;
     object-fit: cover;
-    clip-path: url(#wave);
-    clip-path: margin-box;
 }
 
 
@@ -73,10 +66,7 @@ body{
  top: 2em;
 }
 
-
-/*-----------  TERMINA BANNER BIENVENIDA ---------*/
-
-/*-----------  EMPIEZA ABOUT ---------*/
+/*-----------ABOUT ---------*/
 .about{
     margin-top: 3em;
 }
@@ -372,7 +362,7 @@ body{
 .portfolio .proyecto img{
     object-fit: cover;
     object-position: top left;
-    height: 500px;
+    height: 90vh;
     width: 100%;
 }
 
@@ -386,7 +376,7 @@ body{
     height: 4em;
     width: 5em;
     position: absolute;
-    margin-top: 1.5em;
+    margin-top: 1em;
     top: 0;
     right: 0;
     transition: all ease-in-out 2s;
@@ -403,7 +393,7 @@ body{
     width: 5em;
     float: left;
     position: absolute;
-    margin-top: 1.5em;
+    margin-top: 1em;
     top: 0;
     transition: all ease-in-out 2s;
     position: absolute;
@@ -418,10 +408,14 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 3em 5em 3em 7em;
+    padding-right: 2em;
+    height: 9em;
+    width: 18em;
     transition: transform ease 1s;
     position: absolute;
     max-width: 70%;
+    transition: all ease-in-out 2s;
+
 }
 
 .portfolio .proyecto.izquierda .descripcion{
@@ -431,8 +425,10 @@ body{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 3em 8em 3em 3em;
-    transition: transform ease 1s;
+    padding-left: 2em;
+    height: 13em;
+    width: 25em;
+    transition: all ease-in-out 2s;
     position: absolute;
     text-align: left;
     right: 0;
@@ -453,23 +449,19 @@ body{
 
  @media (min-width: 760px) {
     .portfolio .proyecto.derecha .descripcion{
-        transform: scale(0);
-        transform-origin: left;
+        clip-path: circle(0% at 50% 50%);   
     }
 
     .portfolio .proyecto.derecha:hover .descripcion{
-        transform-origin: left;
-        transform: scale(100%);
+        clip-path: circle(200% at 50% 50%);
     }
 
     .portfolio .proyecto.izquierda .descripcion{
-        transform: scale(0);
-        transform-origin: right;
+        clip-path: circle(0% at 50% 50%);   
     }
 
     .portfolio .proyecto.izquierda:hover .descripcion{
-        transform: scale(100%);
-        transform-origin: right;
+        clip-path: circle(200% at 50% 50%);
     }
 
     .portfolio .proyecto .numero p{       
@@ -485,7 +477,43 @@ body{
 
  /*----------- FOOOTER --------------*/
 footer{
-    height: 200px;
+    height: 200px;  
+    position: relative; 
+}
+
+footer .redes{
+    background-color: aliceblue;
+}
+
+footer .redes a{
+    color: #303030;
+    font-size: 2.5em;
+    padding: 0 0.5em;
+    z-index: 1000;
+}
+
+footer .redes:hover .triangulo{
+    clip-path: polygon(100% 0, 100% 100%, 6% 100%, 0 100%, 0 0);
+
+}
+
+.triangulo{
     background: rgb(225,193,255);
-    background: linear-gradient(173deg, rgba(225,193,255,1) 0%, rgba(225,193,255,1) 54%, rgba(112,114,227,1) 54%, rgba(86,183,238,1) 100%);
+    clip-path: polygon(100% 0, 100% 8%, 6% 100%, 0 100%, 0 0);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: all ease 1s;
+    z-index: -100;
+}
+
+.trianguloAtras{
+    background:  linear-gradient(270deg, #56b7ee, #7072e3);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: all ease 1s;
+    z-index: -200;
 }
