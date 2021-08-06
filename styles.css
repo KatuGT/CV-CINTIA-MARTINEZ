@@ -1,37 +1,39 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Mandali&family=Pacifico&family=Righteous&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Roboto;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Mandali&family=Pacifico&family=Righteous&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
 }
 
-
-body{
-    background-color: #303030;
-    overflow-x: hidden;
+body {
+  background-color: #303030;
+  overflow-x: hidden;
 }
 
 /*-----------  INICIA NAVBAR ---------*/
-
-
-/*-----------  TERMINA NAVBAR ---------*/
-
-
-/*-----------  INICIA BANNER BIENVENIDA ---------*/
-
-.banner{
-    position: relative;    
+.navbar-brand img {
+  height: 2em;
+  width: 2em;
+  margin-right: 0.5em;
 }
 
-.banner img{
-    height: 100vh;
-    width: 100%;
-    object-fit: cover;
+.nav-link:hover{
+    color: red;
 }
 
+/*-----------  BANNER BIENVENIDA ---------*/
+
+.banner {
+  position: relative;
+}
+
+.banner img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
 
 /* #wave{
     overflow: hidden;
@@ -55,465 +57,472 @@ body{
     
 } */
 
-.banner .saludo{    
- font-family: Roboto;
- font-weight: 900;
- font-size: clamp(2em, 6vw, 8em);
- color: white;
- padding: 0 2rem;
- position: absolute;
- display: flex;
- top: 2em;
+.banner .saludo {
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: clamp(4em, 6vw, 8em);
+  color: white;
+  padding: 0 2rem;
+  position: absolute;
+  display: flex;
+  top: 2em;
 }
 
 /*-----------ABOUT ---------*/
-.about{
-    margin-top: 3em;
+.about {
+  margin-top: 3em;
 }
 
-.sobreMi{
-    margin-top: 2em;
+.sobreMi {
+  margin-top: 2em;
 }
-.rombo{
-    position: relative;
-}
-
-.foto{
-    z-index: 50;
-    width: 80%;
+.rombo {
+  position: relative;
 }
 
-.nombre{
-    font-size: 2em;
+.foto {
+  z-index: 50;
+  width: 80%;
 }
 
-.form{
-    position: absolute;
+.nombre {
+  font-size: 2em;
 }
 
-.bg-1{
-    height: 90%;
-    top: -2em;
-    z-index: 10;
-    animation:desplazamientoA 9s linear infinite forwards;
+.form {
+  position: absolute;
 }
 
-.bg-2{
-    height: 90%;
-    top: 2em;
-    animation:desplazamientoB 8s linear infinite forwards; 
+.bg-1 {
+  height: 90%;
+  top: -2em;
+  z-index: 10;
+  animation: desplazamientoA 9s linear infinite forwards;
 }
 
-.bg-3{
-    height: 90%;
-    top: 2em;
-    z-index: 10;
-    transform: rotate(15deg);
-    animation:desplazamientoC 9s linear infinite forwards;
+.bg-2 {
+  height: 90%;
+  top: 2em;
+  animation: desplazamientoB 8s linear infinite forwards;
 }
 
-.bg-4{
-    height: 100%;
-    top: -2em;
-    z-index: 10;
-    animation:desplazamientoD 9s linear infinite forwards;
+.bg-3 {
+  height: 90%;
+  top: 2em;
+  z-index: 10;
+  transform: rotate(15deg);
+  animation: desplazamientoC 9s linear infinite forwards;
 }
 
+.bg-4 {
+  height: 100%;
+  top: -2em;
+  z-index: 10;
+  animation: desplazamientoD 9s linear infinite forwards;
+}
 
 @keyframes desplazamientoA {
-    0%{
-        transform: translateX(-3em);
-    }
+  0% {
+    transform: translateX(-3em);
+  }
 
-    30%{
-        transform: translateY(-1em) rotate(120deg);
-    }
+  30% {
+    transform: translateY(-1em) rotate(120deg);
+  }
 
-    50%{
-        transform: translateX(3em);
-    }
+  50% {
+    transform: translateX(3em);
+  }
 
-    70%{
-        transform: translateY(3em);
-    }
+  70% {
+    transform: translateY(3em);
+  }
 
-    100%{
-        transform: translateX(-3em);
-        
-    }
-    
-    
+  100% {
+    transform: translateX(-3em);
+  }
 }
 
 @keyframes desplazamientoB {
-    0%{
-        transform: translateX(3em);
-    }
+  0% {
+    transform: translateX(3em);
+  }
 
-    30%{
-        transform: translateY(3em);
-    }
+  30% {
+    transform: translateY(3em);
+  }
 
-    50%{
-        transform: translateX(-3em);
-    }
+  50% {
+    transform: translateX(-3em);
+  }
 
-    70%{
-        transform: translateY(-3em);
-    }
+  70% {
+    transform: translateY(-3em);
+  }
 
-    100%{
-        transform: translateX(3em);
-        
-    }
-    
-    
+  100% {
+    transform: translateX(3em);
+  }
 }
 
 @keyframes desplazamientoC {
-    0%{
-        transform: translateX(3em);
-    }
+  0% {
+    transform: translateX(3em);
+  }
 
-    30%{
-        transform: translateY(2em);
-    }
+  30% {
+    transform: translateY(2em);
+  }
 
-    50%{
-        transform: translateX(-1em) rotate(220deg);
-    }
+  50% {
+    transform: translateX(-1em) rotate(220deg);
+  }
 
-    70%{
-        transform: translateY(-3em);
-    }
+  70% {
+    transform: translateY(-3em);
+  }
 
-    100%{
-        transform: translateX(3em);
-        
-    }
-    
-    
+  100% {
+    transform: translateX(3em);
+  }
 }
 
 @keyframes desplazamientoD {
-    0%{
-        transform: translateX(3em);
-    }
+  0% {
+    transform: translateX(3em);
+  }
 
-    30%{
-        transform: translateY(3em);
-    }
+  30% {
+    transform: translateY(3em);
+  }
 
-    50%{
-        transform: translateX(-1em);
-    }
+  50% {
+    transform: translateX(-1em);
+  }
 
-    70%{
-        transform: translateY(0em);
-    }
+  70% {
+    transform: translateY(0em);
+  }
 
-    100%{
-        transform: translateX(3em);
-        
-    }
-    
-    
+  100% {
+    transform: translateX(3em);
+  }
 }
 
-.datos{
-    color: aliceblue;
-    position: relative;
+.datos {
+  color: aliceblue;
+  position: relative;
 }
 
-
-.skills-bar{
-    padding: 0 4em;
+.skills-bar {
+  padding: 0 4em;
 }
 
-.skills-bar .bar{
-    margin: 20px 0;
+.skills-bar .bar {
+  margin: 20px 0;
 }
 
-.skills-bar .bar:first-child{
-    margin-top: 0;
+.skills-bar .bar:first-child {
+  margin-top: 0;
 }
 
 .skills-bar .bar .info {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
-.skills-bar .bar .info span{
-    font-size: 1em;
-    font-weight: bold;
-    color: white;
+.skills-bar .bar .info span {
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
 }
 
-.skills-bar .bar .line{
-    height: 3em;
-    width: 100%;
-    background-color: grey;
-    border-radius: 25em;
-    box-shadow: inset 0 1px 1px rgba(0, 0n, 0, .5);
-    position: relative;
-    padding: .3em;
+.skills-bar .bar .line {
+  height: 3em;
+  width: 100%;
+  background-color: grey;
+  border-radius: 25em;
+  box-shadow: inset 0 1px 1px rgba(0, 0n, 0, 0.5);
+  position: relative;
+  padding: 0.3em;
 }
 
-.skills-bar .bar .line span{    
-    border-radius: 25em;
-    height: 80%;
-    background-color: rosybrown;
-    position: absolute;
+.skills-bar .bar .line span {
+  border-radius: 25em;
+  height: 80%;
+  background-color: rosybrown;
+  position: absolute;
 
-    background: linear-gradient(270deg, #e1c1ff, #56b7ee, #7072e3);
-    background-size: 600% 600%;
+  background: linear-gradient(270deg, #e1c1ff, #56b7ee, #7072e3);
+  background-size: 600% 600%;
 
-    -webkit-animation: gradiente 11s ease infinite;
-    -moz-animation: gradiente 11s ease infinite;
-    animation: gradiente 11s ease infinite;
+  -webkit-animation: gradiente 11s ease infinite;
+  -moz-animation: gradiente 11s ease infinite;
+  animation: gradiente 11s ease infinite;
 }
-
 
 @keyframes gradiente {
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-
-.skills-bar .bar .line .html{
-    width: 90%;
+.skills-bar .bar .line .html {
+  width: 90%;
 }
 
-.skills-bar .bar .line .css{
-    width: 80%;
+.skills-bar .bar .line .css {
+  width: 80%;
 }
 
-.skills-bar .bar .line .flex{
-    width: 90%;
+.skills-bar .bar .line .flex {
+  width: 90%;
 }
 
-.skills-bar .bar .line .bootstrap{
-    width: 60%;
+.skills-bar .bar .line .bootstrap {
+  width: 60%;
 }
 
-.skills-bar .bar .line .js{
-    width: 75%;
+.skills-bar .bar .line .js {
+  width: 75%;
 }
 
-.skills-bar .bar .line .react{
-    width: 60%;
+.skills-bar .bar .line .react {
+  width: 60%;
 }
 
-.skills-bar .bar .line .node{
-    width: 60%;
+.skills-bar .bar .line .node {
+  width: 60%;
 }
-
 
 /* ---------------EDUCACION Y EXPERINCIA------------- */
-.edu-y-exp{
-    padding-top: 3em;
-    margin-top: 3em;
-    position: relative;
-    overflow: hidden;
-    color: #fff;
+.edu-y-exp {
+  padding-top: 3em;
+  margin-top: 3em;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
 }
 
-.sombra::before{
-    content: '';
-    background-color: rgba(0, 0, 0, 0.9);
-    position: absolute;
-    height: 100%;
-    width: 200%;
-    border-radius: 100%;
-    top: -90%;
-    filter: blur(2.5em);
+.sombra::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  height: 100%;
+  width: 200%;
+  border-radius: 100%;
+  top: -90%;
+  filter: blur(2.5em);
 }
 
 .instituto,
-.empresa{
-    margin-top: 1em;
+.empresa {
+  margin-top: 1em;
 }
 
-.edu-y-exp .titulo{
-    font-size: 2.5rem;
+.edu-y-exp .titulo {
+  font-size: 3.5rem;
 }
 
-.edu-y-exp h3{
-    font-size: 1em;
+.edu-y-exp h3 {
+  font-size: 2em;
 }
 
-.edu-y-exp p{
-    margin-bottom: 0;
+.edu-y-exp p {
+  margin-bottom: 0;
 }
 
 /* ---------------PORTFOLIO------------- */
 
-.portfolio{
-    margin-top: 3em;
-    overflow-x: hidden;
+.portfolio {
+  margin-top: 3em;
+  overflow-x: hidden;
 }
 
-.portfolio .proyecto{
-    overflow-x: hidden;
-    margin-bottom: 10em;  
-    position: relative;  
+.portfolio .proyecto {
+  overflow-x: hidden;
+  margin-bottom: 10em;
+  position: relative;
 }
 
-.portfolio .proyecto img{
-    object-fit: cover;
-    object-position: top left;
-    height: 90vh;
-    width: 100%;
+.portfolio .proyecto img {
+  object-fit: cover;
+  object-position: top left;
+  height: 90vh;
+  width: 100%;
+  filter: saturate(1);
+  transition: all ease-in-out 1s;
 }
 
-.portfolio .proyecto.derecha .numero p{
-    overflow-x: hidden;
-    font-size: 2em;
-    background-color: hsla(225, 73%, 57%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4em;
-    width: 5em;
-    position: absolute;
-    margin-top: 1em;
-    top: 0;
-    right: 0;
-    transition: all ease-in-out 2s;
-    position: absolute;
+.proyecto:hover img {
+  filter: saturate(0.1);
 }
 
-.portfolio .proyecto.izquierda .numero p{
-    font-size: 2em;
-    background-color: hsla(225, 73%, 57%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 4em;
-    width: 5em;
-    float: left;
-    position: absolute;
-    margin-top: 1em;
-    top: 0;
-    transition: all ease-in-out 2s;
-    position: absolute;
+.portfolio .proyecto.derecha .numero p {
+  overflow-x: hidden;
+  font-size: 2em;
+  background-color: hsla(225, 73%, 57%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4em;
+  width: 5em;
+  position: absolute;
+  margin-top: 1em;
+  top: 0;
+  right: 0;
+  transition: all ease-in-out 2s;
+  position: absolute;
 }
 
-
-
-.portfolio .proyecto.derecha .descripcion{
-    position: absolute;
-    background-color: hsla(225, 73%, 57%);
-    bottom: 5%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-right: 2em;
-    height: 9em;
-    width: 18em;
-    transition: transform ease 1s;
-    position: absolute;
-    max-width: 70%;
-    transition: all ease-in-out 2s;
-
+.portfolio .proyecto.izquierda .numero p {
+  font-size: 2em;
+  background-color: hsla(225, 73%, 57%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4em;
+  width: 5em;
+  float: left;
+  position: absolute;
+  margin-top: 1em;
+  top: 0;
+  transition: all ease-in-out 2s;
+  position: absolute;
 }
 
-.portfolio .proyecto.izquierda .descripcion{
-    position: absolute;
-    background-color: hsla(225, 73%, 57%);
-    bottom: 5%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding-left: 2em;
-    height: 13em;
-    width: 25em;
-    transition: all ease-in-out 2s;
-    position: absolute;
-    text-align: left;
-    right: 0;
-    max-width: 70%;
+.portfolio .proyecto.derecha .descripcion {
+  position: absolute;
+  background-color: hsla(225, 73%, 57%);
+  bottom: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 2em;
+  height: 9em;
+  width: 18em;
+  transition: transform ease 1s;
+  position: absolute;
+  max-width: 70%;
+  transition: all ease-in-out 2s;
 }
 
-
-
-.portfolio .descripcion h3{
-    font-size: clamp(2em, 3vw, 3em);
-    font-weight: 900;
+.portfolio .proyecto.izquierda .descripcion {
+  position: absolute;
+  background-color: hsla(225, 73%, 57%);
+  bottom: 5%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 2em;
+  height: 13em;
+  width: 25em;
+  transition: all ease-in-out 2s;
+  position: absolute;
+  text-align: left;
+  right: 0;
+  max-width: 70%;
 }
 
-.portfolio .descripcion a{
-    color: white;
-    text-decoration: none;
+.portfolio .descripcion h3 {
+  font-size: clamp(2em, 3vw, 3em);
+  font-weight: 900;
 }
 
- @media (min-width: 760px) {
-    .portfolio .proyecto.derecha .descripcion{
-        clip-path: circle(0% at 50% 50%);   
-    }
-
-    .portfolio .proyecto.derecha:hover .descripcion{
-        clip-path: circle(200% at 50% 50%);
-    }
-
-    .portfolio .proyecto.izquierda .descripcion{
-        clip-path: circle(0% at 50% 50%);   
-    }
-
-    .portfolio .proyecto.izquierda:hover .descripcion{
-        clip-path: circle(200% at 50% 50%);
-    }
-
-    .portfolio .proyecto .numero p{       
-        clip-path: circle(0% at 50% 50%);   
-    }
-
-
-    .portfolio .proyecto:hover p{
-        clip-path: circle(100% at 50% 50%);
-    }
-
- }
-
- /*----------- FOOOTER --------------*/
-footer{
-    height: 200px;  
-    position: relative; 
+.portfolio .descripcion a {
+  color: white;
+  text-decoration: none;
 }
 
-footer .redes{
-    background-color: aliceblue;
+@media (min-width: 760px) {
+  .portfolio .proyecto.derecha .descripcion {
+    clip-path: circle(0% at 50% 50%);
+  }
+
+  .portfolio .proyecto.derecha:hover .descripcion {
+    clip-path: circle(200% at 50% 50%);
+  }
+
+  .portfolio .proyecto.izquierda .descripcion {
+    clip-path: circle(0% at 50% 50%);
+  }
+
+  .portfolio .proyecto.izquierda:hover .descripcion {
+    clip-path: circle(200% at 50% 50%);
+  }
+
+  .portfolio .proyecto .numero p {
+    clip-path: circle(0% at 50% 50%);
+  }
+
+  .portfolio .proyecto:hover p {
+    clip-path: circle(100% at 50% 50%);
+  }
 }
 
-footer .redes a{
-    color: #303030;
-    font-size: 2.5em;
-    padding: 0 0.5em;
-    z-index: 1000;
+/*----------- FOOOTER --------------*/
+footer {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
 }
 
-footer .redes:hover .triangulo{
-    clip-path: polygon(100% 0, 100% 100%, 6% 100%, 0 100%, 0 0);
-
+footer .redes a {
+  color: #303030;
+  font-size: 2.5em;
+  padding: 0 0.5em;
+  z-index: 1000;
 }
 
-.triangulo{
-    background: rgb(225,193,255);
-    clip-path: polygon(100% 0, 100% 8%, 6% 100%, 0 100%, 0 0);
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    transition: all ease 1s;
-    z-index: -100;
+.triangulo {
+  background: rgb(225, 193, 255);
+  clip-path: polygon(100% 0, 100% 8%, 35% 100%, 0 100%, 0 0);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 160vw;
+  transition: all ease 1s;
+  z-index: -100;
 }
 
-.trianguloAtras{
-    background:  linear-gradient(270deg, #56b7ee, #7072e3);
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    transition: all ease 1s;
-    z-index: -200;
+.trianguloAtras {
+  background: linear-gradient(270deg, #56b7ee, #7072e3);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 110%;
+  left: -30px;
+  transition: all ease 1s;
+  z-index: -200;
+}
+
+.info img {
+  height: 2em;
+  width: 2em;
+  margin-bottom: 0.3em;
+}
+
+.info p {
+  margin-bottom: 0.3em;
+}
+
+@media (max-width: 760px) {
+  .triangulo {
+    clip-path: polygon(100% 0, 100% 0%, 0% 50%, 0% 0%, 0 0);
+  }
+}
+
+@media (min-width: 761px) {
+  .triangulo {
+    clip-path: polygon(100% 0, 100% 8%, 35% 100%, 0 100%, 0 0);
+  }
+
+  footer:hover .triangulo {
+    clip-path: polygon(100% 0, 100% 0%, 0% 50%, 0% 0%, 0 0);
+  }
 }
