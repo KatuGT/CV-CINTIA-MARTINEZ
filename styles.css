@@ -19,8 +19,8 @@ body {
   margin-right: 0.5em;
 }
 
-.nav-link:hover{
-    color: red;
+.nav-link:hover {
+  color: red;
 }
 
 /*-----------  BANNER BIENVENIDA ---------*/
@@ -34,28 +34,6 @@ body {
   width: 100%;
   object-fit: cover;
 }
-
-/* #wave{
-    overflow: hidden;
-    animation: trasladar 20s linear infinite;
-    animation-fill-mode: backwards;
-    border: 1em solid red;
-}
-
-@keyframes trasladar {
-    0%{
-        transform: translateX(0);
-    }
-
-    50%{
-        transform: translateX(-1000px);
-    }
-
-    100%{
-        transform: translateX(0);
-    }
-    
-} */
 
 .banner .saludo {
   font-family: Roboto;
@@ -212,6 +190,8 @@ body {
 .datos {
   color: aliceblue;
   position: relative;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .skills-bar {
@@ -226,14 +206,15 @@ body {
   margin-top: 0;
 }
 
-.skills-bar .bar .info {
+.skills-bar .bar .lenguaje {
   font-size: 1.5rem;
 }
 
-.skills-bar .bar .info span {
+.skills-bar .bar .lenguaje span {
   font-size: 1em;
   font-weight: bold;
   color: white;
+  cursor: pointer;
 }
 
 .skills-bar .bar .line {
@@ -325,10 +306,6 @@ body {
   margin-top: 1em;
 }
 
-.edu-y-exp .titulo {
-  font-size: 3.5rem;
-}
-
 .edu-y-exp h3 {
   font-size: 2em;
 }
@@ -336,6 +313,21 @@ body {
 .edu-y-exp p {
   margin-bottom: 0;
 }
+
+.edu-y-exp .titulo {
+  font-size: 3.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.educacion div:nth-child(2),
+.educacion div:nth-child(3),
+.educacion div:nth-child(4) {
+  position: relative;
+}
+
+
+
 
 /* ---------------PORTFOLIO------------- */
 
@@ -501,7 +493,7 @@ footer .redes a {
   z-index: -200;
 }
 
-.info img {
+footer img {
   height: 2em;
   width: 2em;
   margin-bottom: 0.3em;
@@ -525,4 +517,77 @@ footer .redes a {
   footer:hover .triangulo {
     clip-path: polygon(100% 0, 100% 0%, 0% 50%, 0% 0%, 0 0);
   }
+
+  .educacion div::before,
+.educacion .titulo.edu::before {
+  content: "";
+  height: 100%;
+  width: 0.1%;
+  right: -6px;
+  position: absolute;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 500ms ease-in;
+}
+
+.edu-y-exp .titulo.edu::before {  
+  background-color: rgb(252, 76, 114);
+  
+}
+
+.educacion div:nth-child(2)::before {
+  background-color: rgb(246, 76, 252);
+ 
+}
+
+.educacion div:nth-child(3)::before {
+  background-color: rgb(167, 76, 252);
+  
+}
+
+.educacion div:nth-child(4)::before {
+  background-color: rgb(76, 138, 252);
+  
+}
+
+.experiencia .titulo{
+  position: relative;
+  display: inline-block;
+}
+
+.experiencia .empresa{
+  position: relative;
+}
+
+.experiencia .titulo::before,
+.experiencia div::before{
+  content: "";
+  height: 100%;
+  width: 100%;
+  width: .1%;
+  left: -6px;
+  position: absolute;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 500ms ease-in;
+  background-color: rgb(252, 76, 114);  
+}
+
+.experiencia div:nth-child(2)::before {
+  background-color: rgb(246, 76, 252);  
+}
+
+.experiencia div:nth-child(2)::before {
+  background-color: rgb(167, 76, 252);
+}
+
+.edu-y-exp .titulo.edu:hover:before,
+.edu-y-exp div:nth-child(2):hover:before,
+.edu-y-exp div:nth-child(3):hover:before,
+.edu-y-exp div:nth-child(4):hover:before,
+.experiencia .titulo:hover:before,
+.experiencia div:nth-child(2):hover:before{
+  transform: scaleY(1);
+  transform-origin: top;
+}
 }
