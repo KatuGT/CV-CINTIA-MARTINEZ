@@ -358,6 +358,8 @@ body {
 .portfolio .proyecto.derecha .numero p {
   overflow-x: hidden;
   font-size: 2em;
+  font-weight: bolder;
+  color: #fff;
   background-color: hsla(225, 73%, 57%);
   display: flex;
   justify-content: center;
@@ -374,6 +376,8 @@ body {
 
 .portfolio .proyecto.izquierda .numero p {
   font-size: 2em;
+  font-weight: bolder;
+  color: #fff;
   background-color: hsla(225, 73%, 57%);
   display: flex;
   justify-content: center;
@@ -421,12 +425,13 @@ body {
   max-width: 70%;
 }
 
+
 .portfolio .descripcion h3 {
   font-size: clamp(2em, 3vw, 3em);
   font-weight: 900;
 }
 
-.portfolio .descripcion a {
+.portfolio .descripcion a{
   color: white;
   text-decoration: none;
 }
@@ -458,10 +463,28 @@ body {
 }
 
 /*----------- FOOOTER --------------*/
+
+.nav-bar{
+  position: absolute;
+}
+
+ .navbar-toggler{
+ background-color: red;
+ border-radius: 100vw;
+}
+
 footer {
   height: 200px;
   position: relative;
   overflow: hidden;
+}
+ footer .nav-bar{
+   position: absolute;
+ }
+
+footer .navbar-toggler{
+  background-color: red;
+  border-radius: 100vw;
 }
 
 footer .redes a {
