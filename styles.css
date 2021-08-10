@@ -7,6 +7,10 @@
   font-family: Roboto;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #303030;
   overflow-x: hidden;
@@ -464,27 +468,26 @@ body {
 
 /*----------- FOOOTER --------------*/
 
-.nav-bar{
-  position: absolute;
-}
-
- .navbar-toggler{
- background-color: red;
- border-radius: 100vw;
-}
 
 footer {
   height: 200px;
   position: relative;
   overflow: hidden;
 }
- footer .nav-bar{
-   position: absolute;
- }
 
-footer .navbar-toggler{
-  background-color: red;
-  border-radius: 100vw;
+
+#boton-arriba{
+  position: absolute;
+  height: 3em;
+  width: 3em;
+  background-color: #e1c1ff;
+  display: grid;
+  place-items: center;
+  right: 2em;
+  bottom: 0;
+  font-size: 1.5em;
+  cursor: pointer;
+  z-index: 10000;
 }
 
 footer .redes a {
