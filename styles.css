@@ -23,9 +23,6 @@ body {
   margin-right: 0.5em;
 }
 
-.nav-link:hover {
-  color: red;
-}
 
 /*-----------  BANNER BIENVENIDA ---------*/
 
@@ -468,6 +465,52 @@ body {
 
 /*----------- FOOOTER --------------*/
 
+
+.nav-flotante{
+  position: relative;
+}
+
+.nav-flotante .navbar{
+  position: absolute;
+  width: 100%;
+  top: -135px;
+  transform: scale(1, 0);
+  transform-origin: bottom;
+  transition: transform 250ms ease-in-out;
+}
+
+.nav-flotante .navbar  a {
+  opacity: 0;
+}
+.navbar-checkbox{
+  display: none;
+}
+.navbar-checkbox:checked ~ .navbar{
+  transform: scale(1, 1);
+}
+
+.navbar-checkbox:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.boton-nav-flotante{
+  position: absolute;
+  right: 2em;
+  margin-top: 1em;
+  height: 2em;
+  width: 2em;
+  font-size: 1.5em;
+  border-radius: 25em;
+  background-color: #56b7ee;
+  background-blend-mode:  difference;
+  color: #fff;
+  box-shadow: 0 0 2em rgba(0, 0, 0, .5);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 10000;
+}
 
 footer {
   height: 200px;
