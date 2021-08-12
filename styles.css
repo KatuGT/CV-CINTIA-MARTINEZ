@@ -30,6 +30,7 @@ body {
 
 .banner {
   position: relative;
+  overflow: hidden;
 }
 
 .banner img {
@@ -47,6 +48,29 @@ body {
   position: absolute;
   display: flex;
   top: 2em;
+}
+
+.wave{
+  position: absolute;
+  color: #303030;
+  bottom: -30px;
+  width: 200vw;
+  animation: move linear 50s infinite  forwards;
+
+}
+
+@keyframes move {
+  0%{
+    transform: translateX(0);
+  }
+
+  50%{
+    transform: translateX(-50%);
+  }
+
+  100%{
+    transform: translateX(0);
+  }
 }
 
 /*-----------ABOUT ---------*/
