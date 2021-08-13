@@ -12,6 +12,10 @@ body {
   overflow-x: hidden;
 }
 
+.row{
+  --bs-gutter-x: 0;
+}
+
 /*-----------  INICIA NAVBAR ---------*/
 
 .navbar{
@@ -23,7 +27,7 @@ body {
 .navbar-brand img {
   height: 2em;
   width: 2em;
-  margin-right: 0.5em;
+  margin-right: 0.2em;
 }
 
 /*-----------  BANNER BIENVENIDA ---------*/
@@ -53,23 +57,17 @@ body {
 .wave{
   position: absolute;
   color: #303030;
-  bottom: -30px;
   width: 200vw;
-  animation: move linear 50s infinite  forwards;
-
+  bottom: -1vh;
+  animation: move linear 25s infinite;
 }
 
 @keyframes move {
   0%{
     transform: translateX(0);
   }
-
-  50%{
-    transform: translateX(-50%);
-  }
-
   100%{
-    transform: translateX(0);
+    transform: translateX(-50%);
   }
 }
 
@@ -470,7 +468,7 @@ body {
 .nav-flotante .navbar {
   position: absolute;
   width: 100%;
-  top: -136px;
+  top: -137px;
   transform: scale(1, 0);
   transform-origin: bottom;
   transition: transform 250ms ease-in-out;
@@ -499,14 +497,20 @@ body {
   width: 2em;
   font-size: 1.5em;
   border-radius: 25em;
-  background-color: #56b7ee;
+  background-color: rgb(86, 183, 238);
   background-blend-mode: difference;
   color: #fff;
-  box-shadow: 0 0 2em rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.3);
   display: grid;
   place-items: center;
   cursor: pointer;
   z-index: 10000;
+  transition: box-shadow  1s linear ;
+}
+
+.boton-nav-flotante:hover{
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.3),
+              0 0 1px 5px rgba(0, 0, 0, .1);
 }
 
 footer {
