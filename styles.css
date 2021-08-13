@@ -12,13 +12,13 @@ body {
   overflow-x: hidden;
 }
 
-.row{
+.row {
   --bs-gutter-x: 0;
 }
 
 /*-----------  INICIA NAVBAR ---------*/
 
-.navbar{
+.navbar {
   top: 0;
   left: 0;
   position: fixed;
@@ -54,23 +54,23 @@ body {
   top: 2em;
 }
 
-.wave{
+.wave {
   position: absolute;
   color: #303030;
   width: 200vw;
   bottom: -1vh;
-  animation: move 50s linear 0s infinite normal ;
+  animation: move 50s linear 0s infinite normal;
 }
 
 @keyframes move {
-  0%{
+  0% {
     transform: translateX(0);
   }
-  50%{
+  50% {
     transform: translateX(-100vw);
   }
 
-  100%{
+  100% {
     transform: translateX(0);
   }
 }
@@ -461,8 +461,6 @@ body {
   text-decoration: none;
 }
 
-
-
 /*----------- FOOOTER --------------*/
 
 .nav-flotante {
@@ -509,12 +507,11 @@ body {
   place-items: center;
   cursor: pointer;
   z-index: 10000;
-  transition: box-shadow  1s linear ;
+  transition: box-shadow 1s linear;
 }
 
-.boton-nav-flotante:hover{
-  box-shadow: 0 0 2em rgba(0, 0, 0, 0.3),
-              0 0 1px 5px rgba(0, 0, 0, .1);
+.boton-nav-flotante:hover {
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.3), 0 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 footer {
@@ -543,7 +540,6 @@ footer .redes a {
   padding: 0 0.5em;
   z-index: 1000;
 }
-
 
 .triangulo {
   background: rgb(225, 193, 255);
@@ -583,9 +579,7 @@ footer img {
   }
 }
 
-
 @media (min-width: 760px) {
-
   .portfolio .proyecto.derecha .descripcion {
     clip-path: circle(0% at 50% 50%);
   }
@@ -609,8 +603,7 @@ footer img {
   .portfolio .proyecto:hover p {
     clip-path: circle(100% at 50% 50%);
   }
-} 
-
+}
 
 @media (min-width: 761px) {
   .triangulo {
