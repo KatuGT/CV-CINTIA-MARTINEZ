@@ -59,15 +59,19 @@ body {
   color: #303030;
   width: 200vw;
   bottom: -1vh;
-  animation: move linear 25s infinite;
+  animation: move 50s linear 0s infinite normal ;
 }
 
 @keyframes move {
   0%{
     transform: translateX(0);
   }
+  50%{
+    transform: translateX(-100vw);
+  }
+
   100%{
-    transform: translateX(-50%);
+    transform: translateX(0);
   }
 }
 
@@ -539,6 +543,7 @@ footer .redes a {
   padding: 0 0.5em;
   z-index: 1000;
 }
+
 
 .triangulo {
   background: rgb(225, 193, 255);
